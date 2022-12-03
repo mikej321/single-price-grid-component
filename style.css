@@ -182,7 +182,7 @@ h3 {
 
 /* Media Queries */
 
-@media (min-width: 389px) {
+@media (min-width: 374px) {
   .col-1 > p:nth-child(3) {
     font-size: 1.3rem;
   }
