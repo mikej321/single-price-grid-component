@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --karla: 'Karla', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--karla);
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--light-gray);
+  padding: 7rem 4rem;
+  display: grid;
+  grid-template-areas: "col-1"
+                       "col-2"
+                       "col-3";
+  grid-template-columns: minmax(200px, 400px);
+  
+  
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.col-1,
+.col-2,
+.col-3 {
+  
+}
+
+/* First Column styling */
+
+.col-1 {
+  background-color: white;
+  padding: 3rem; 
+  display: flex;
+  flex-direction: column;
+  grid-area: col-1;
+  gap: 2rem;
+  border-radius: 8px 8px 0 0;
+  box-shadow:  0px 1px 35px rgba(0, 0, 0, 0.1);
+}
+
+.col-1 > h3 {
+  color: var(--cyan);
+}
+
+.col-1 > p:nth-child(2) {
+  font-size: 1.6rem;
+  color: var(--bright-yellow);
+  font-weight: 700;
+  line-height: 2.3rem;
+}
+
+.col-1 > p:nth-child(3) {
+  color: var(--grayish-blue);
+  font-size: 1.4rem;
+  max-width: 280px;
+  line-height: 2.7rem;
+}
+
+/* Second Column styling */
+
+.col-2 {
+  background-color: var(--cyan);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  grid-area: col-2;
+  color: var(--light-gray);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow:  0px 1px 35px rgba(0, 0, 0, 0.1);
+}
+
+.col-2 > h3 {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.col-2 > p:nth-child(3) {
+  margin-top: -1.3rem;
+  margin-bottom: 1rem;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.col-2 > button {
+  height: 4.6rem;
+  background-color: var(--bright-yellow);
+  border: none;
+  border-radius: 6px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
+  color: var(--light-gray);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* styling for the price component of column 2 */
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price > p:first-child {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.price > p:last-child {
+  opacity: 0.6;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  color: var(--light-gray);
+}
+
+/* Column 3 styling */
+
+.col-3 {
+  background-color: var(--cyan);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  grid-area: col-3;
+  border-radius: 0 0 8px 8px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow:  0px 1px 35px rgba(0, 0, 0, 0.1);
+}
+
+.col-3 > h3 {
+ color: var(--light-gray);
+ font-size: 1.7rem;
+ margin-bottom: 2rem; 
+}
+
+/* styling for the links in Column 3 */
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.links > a {
+  text-decoration: none;
+  opacity: 0.6;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  color: var(--light-gray);
+  font-size: 1.4rem;
+}
+
+/* Media Queries */
+
+
+
+@media (min-width: 600px) {
+  .container {
+    grid-template-areas: "col-1 col-1"
+                         "col-2 col-3";
+    max-width: 800px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .col-1,
+  .col-2,
+  .col-3 {
+    padding: 4rem 5rem;
+  }
+
+  .col-1 > h3 {
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .col-1 > p:nth-child(2) {
+    font-size: 2rem;
+    margin-bottom: -1rem;
+  }
+
+  .col-1 > p:nth-child(3) {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    max-width: unset;
+  }
+
+  .col-2 {
+    border-radius: 0 0 0 8px;
+    border-right: unset;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .col-2 > h3 {
+    font-size: 1.6rem;
+  }
+
+  .price {
+
+  }
+
+  .price > p:first-child {
+    font-size: 2.9rem;
+  }
+
+  .price > p:last-child {
+
+  }
+
+  .col-2 > p:nth-child(3) {
+
+  }
+
+  .col-2 > button {
+    max-width: 23.5rem;
+  }
+
+  .col-3 {
+    border: unset;
+    border-radius: 0 0 8px 0;
+  }
+
+  .col-3 > h3 {
+
+  }
+
+  .links {
+    gap: 0.6rem;
+  }
+
+  .links > a {
+
+  }
+}
