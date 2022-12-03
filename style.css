@@ -184,13 +184,25 @@ h3 {
 
 @media (min-width: 374px) {
   .col-1 > p:nth-child(3) {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 387px) {
+  .col-1 > p:nth-child(3) {
     font-size: 1.3rem;
   }
 }
 
-@media (min-width: 407px) {
+@media (min-width: 409px) {
   .col-1 > p:nth-child(3) {
     font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 464px) {
+  .col-1 > p:nth-child(2) {
+    font-size: 1.7rem;
   }
 }
 
